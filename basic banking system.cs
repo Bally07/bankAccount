@@ -12,9 +12,9 @@ if (Answer.ToUpper() == "Y")
     {
         Console.WriteLine("what is your opening balance");
         Account account = new Account(int.Parse(Console.ReadLine()));
+
     }
 }
-
 public class Account
 {   private double _intrest,_balance;
     private int _id;
@@ -68,8 +68,7 @@ public class Account
     }
 }//base class
 public class StudentAccount : Account
-{
-    private double _overdraft;
+{   private double _overdraft;
     public StudentAccount(double OpeningBalance, double OverdraftLimit) : base(OpeningBalance)
     {
         _overdraft = OverdraftLimit;
@@ -99,5 +98,4 @@ public class StudentAccount : Account
         _overdraft = limit;
         return _overdraft; 
     }
-
 }// inheareted class
